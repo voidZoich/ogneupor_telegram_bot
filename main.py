@@ -2,8 +2,7 @@ import logging
 from config import *
 from ping import *
 
-from telegram import InlineQueryResultArticle, InputTextMessageContent
-from telegram import ReplyKeyboardMarkup, ReplyKeyboardRemove, Update
+from telegram import ReplyKeyboardMarkup, ReplyKeyboardRemove
 from telegram.ext import Updater
 from telegram.ext import CommandHandler
 from telegram.ext import MessageHandler, Filters
