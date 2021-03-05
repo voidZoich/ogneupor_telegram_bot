@@ -14,7 +14,7 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 
 
 def start(update, context):
-    reply_keyboard = [['Пинг']]
+    reply_keyboard = [['Пинг'], ['chat_id']]
     update.message.reply_text(
         'Здравствуйте, я бот АСУ ТП Огнеупор, введите команду',
         reply_markup=ReplyKeyboardMarkup(reply_keyboard, resize_keyboard=True, one_time_keyboard=True),
@@ -30,6 +30,10 @@ def ping(update, context):
         )
 
 
+def chat_id(update, context):
+    context.bot.send_message(chat_id=update.effective_chat.id, text=update.effective_chat.id)
+
+
 def unknown(update, context):
     context.bot.send_message(chat_id=update.effective_chat.id, text="Неизвестная команда")
 
@@ -40,6 +44,9 @@ def main():
 
     ping_handler = MessageHandler(Filters.regex('^(Пинг|пинг|Ping|ping)$'), ping)
     dispatcher.add_handler(ping_handler)
+
+    chat_id_handler = MessageHandler(Filters.regex('^(chat_id)$'), chat_id)
+    dispatcher.add_handler(chat_id_handler)
 
     unknown_handler = MessageHandler(Filters.command, unknown)
     dispatcher.add_handler(unknown_handler)
