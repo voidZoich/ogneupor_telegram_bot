@@ -31,5 +31,5 @@ ecom-per-pech,192.168.1.211
 ecom-lunkerit,192.168.1.215
 moxa-lunkerit,192.168.1.15
 ecom-sklad-rmu,192.168.1.212
-moxa-sklad-rmu1,192.168.1.214
-moxa-sklad-rmu2,192.168.1.254
+moxa-sklad-rmu1,192.168.224.166
+moxa-sklad-rmu2,192.168.224.218

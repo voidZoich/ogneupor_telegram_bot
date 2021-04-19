@@ -1,0 +1,9 @@
+{
+  "admin": [
+    "ping", "something"
+  ],
+  "user": [
+    "ping"
+  ],
+  "ban": []
+}
