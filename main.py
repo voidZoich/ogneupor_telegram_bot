@@ -82,12 +82,14 @@ def menu(update, context):
 
 
 def ping(update, _):
-    for host_name, time in pinger():
-        emoji = '❌' if time is None else '✅'
+    update.message.reply_text("Начинаю опрос всех хостов...", reply_markup=ReplyKeyboardRemove())
+    for host_name in pinger():
+        emoji = '❌'
         update.message.reply_text(
-            f"{emoji} {host_name} - {time} сек.",
+            f"{emoji} {host_name} - не доступен",
             reply_markup=ReplyKeyboardRemove()
         )
+    update.message.reply_text("Опрос окончен", reply_markup=ReplyKeyboardRemove())
 
 
 def cancel(update, _) -> int:

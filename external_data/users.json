@@ -9,6 +9,18 @@
         "fullname": "Dmitry",
         "id": 668499320,
         "nick": null,
-        "role": "admin"
+        "role": "user"
+    },
+    {
+        "fullname": "D M",
+        "id": 698737055,
+        "nick": null,
+        "role": "user"
+    },
+    {
+        "fullname": "Irina",
+        "id": 509579175,
+        "nick": "irinanikitina007",
+        "role": "user"
     }
 ]
